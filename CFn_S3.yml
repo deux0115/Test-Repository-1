@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2021-02-03
+Description: Create S3 Bucket
+
+Resources: 
+#S3
+#BUCKET
+  s3Bucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    Properties: 
+      AccessControl: Private
+      BucketName: TEST-BUCKET-1
+      Tags:
+        - Key: Name
+          Value: TEST-BUCKET-1
